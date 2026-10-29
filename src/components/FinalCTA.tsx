@@ -1,0 +1,6 @@
+"use client";
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { ArrowUpRight } from "lucide-react";
+import { getWhatsAppUrl } from "@/lib/site";
+export default function FinalCTA(){return <section className="final-cta"><Image src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=2200&q=90" alt="Quiet luxury living room with warm light" fill sizes="100vw" className="cover-image"/><div className="cta-shade"/><motion.div className="container cta-content" initial={{opacity:0,y:22}} whileInView={{opacity:1,y:0}} viewport={{once:true}} transition={{duration:.7}}><span className="eyebrow">Your space. Your story.</span><h2 className="display">Your space.<br/><i>Your story. Let&apos;s begin.</i></h2><p>A considered interior begins with a conversation. Tell us what you&apos;re imagining, and let&apos;s explore what&apos;s possible.</p><div className="hero-actions"><a href={getWhatsAppUrl("Hello FORMA Atelier, I\u0027d like to discuss an interior design project.")} target="_blank" rel="noreferrer" className="button-light">Start a project <ArrowUpRight size={15}/></a><a href="#work" className="button-ghost">Explore our work <ArrowUpRight size={15}/></a></div></motion.div></section>}
